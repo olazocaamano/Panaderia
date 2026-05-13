@@ -1,12 +1,32 @@
-import { useState } from 'react'
-import './App.css'
+import {
+    BrowserRouter,
+    Routes,
+    Route
+} from "react-router-dom";
+
+import AnimatedBakeryBackground from "./components/AnimatedBakeryBackground";
+
+import "./App.css";
+
+import Login from "./pages/Login";
 
 function App() {
-  return (
-    <div>
-      <h1>Proyecto MERN funcionando</h1>
-    </div>
-  );
+
+    return (
+        <>
+            <AnimatedBakeryBackground />
+
+            <BrowserRouter>
+                <Routes>
+
+                    <Route path="/login" element={<Login />} />
+
+                </Routes>
+            </BrowserRouter>
+        </>
+
+    );
+
 }
 
 export default App;
